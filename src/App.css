@@ -95,3 +95,43 @@ h1 {
 .reset-button:hover {
   filter: brightness(1.06);
 }
+
+.history-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: #f7fbff;
+  border: 1px solid #d4e4f3;
+}
+
+.history-box h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: #10253d;
+}
+
+.history-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.history-box li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-top: 1px dashed #d4e4f3;
+  color: #18314d;
+  font-size: 0.92rem;
+}
+
+.history-box li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.history-box p {
+  margin: 0;
+  color: #48617c;
+}

@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.vibe-card {
+  width: min(720px, 100%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 20px 50px rgba(14, 35, 61, 0.15);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #48617c;
+  font-size: 0.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+  margin: 0.45rem 0 1.25rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: #10253d;
 }
 
-.card {
-  padding: 2em;
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 0.75rem;
 }
 
-.read-the-docs {
-  color: #888;
+.vibe-button {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+  border: 1px solid #c6d3e0;
+  border-radius: 14px;
+  background: #f5f9ff;
+  padding: 0.8rem;
+  color: #18314d;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.vibe-button:hover {
+  transform: translateY(-2px);
+  border-color: #8ca9c6;
+  box-shadow: 0 8px 18px rgba(14, 35, 61, 0.14);
+}
+
+.vibe-button.is-selected {
+  border-color: #0d5ea5;
+  box-shadow: 0 8px 22px rgba(13, 94, 165, 0.25);
+  background: linear-gradient(180deg, #f0f7ff 0%, #dceeff 100%);
+}
+
+.emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: #edf4fc;
+  color: #18314d;
+}
+
+.status-box p {
+  margin: 0;
+}
+
+.reset-button {
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem;
+  background: #10253d;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.reset-button:hover {
+  filter: brightness(1.06);
 }
